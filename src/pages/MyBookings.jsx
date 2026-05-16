@@ -108,7 +108,7 @@ const{axios,user} =useAppContext()
             {/* Right: Total Price */}
             <div className="section-right">
               <p className="price-label">Total Price</p>
-              <h2 className="price-value">${booking.price}</h2>
+              <h2 className="price-value">₹{booking.price}</h2>
               <p className="booked-timestamp">Booked on {booking.createdAt.split("T")[0]}</p>
             </div>
 
