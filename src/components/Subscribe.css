@@ -1,0 +1,47 @@
+.subscribe{
+width:90%;
+margin:80px auto;
+text-align:center;
+}
+
+.subscribe-title{
+font-size:42px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subscribe-subtitle{
+color:#6b7280;
+margin-bottom:40px;
+}
+
+.subscribe-box{
+display:flex;
+max-width:750px;
+margin:auto;
+border:1px solid #e5e7eb;
+border-radius:10px;
+overflow:hidden;
+}
+
+.subscribe-input{
+flex:1;
+padding:16px;
+border:none;
+outline:none;
+font-size:16px;
+}
+
+.subscribe-btn{
+background:#b026ff ;
+color:white;
+border:none;
+padding:0 35px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.subscribe-btn:hover{
+background:#1d4ed8;
+}

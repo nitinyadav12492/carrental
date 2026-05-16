@@ -1,0 +1,50 @@
+.luxury-banner{
+  width: 90%;
+  margin: 60px auto;
+  padding: 50px;
+  border-radius: 20px;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* background: linear-gradient(90deg,#2563eb,#93b5e1); */
+  background-color: #b026ff ;
+  color: white;
+}
+
+.banner-content{
+  max-width: 520px;
+}
+
+.banner-title{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.banner-text{
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.banner-btn{
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-btn:hover{
+  background:#f1f5f9;
+}
+
+.banner-image img{
+  width: 420px;
+}

@@ -1,0 +1,27 @@
+.owner-layout{
+width:100%;
+min-height:100vh;
+background:#f5f7fb;
+}
+
+/* body section */
+
+.owner-body{
+display:flex;
+}
+
+/* sidebar */
+
+.owner-body > :first-child{
+width:240px;
+min-height:calc(100vh - 60px);
+background:#111;
+color:white;
+}
+
+/* main content */
+
+.owner-content{
+flex:1;
+padding:30px;
+}

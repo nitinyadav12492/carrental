@@ -1,0 +1,122 @@
+/* CarCart.css - Exact match with reference image */
+
+.car-card {
+  background: #ffffff;
+  border-radius: 16px; /* Slightly softer corners for a premium feel */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Clean, soft shadow */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 360px; /* Adjust based on your layout needs */
+  border: 1px solid #f0f0f0; /* Optional: adds definition */
+}
+
+.car-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deepen shadow on hover */
+}
+
+/* 1. Image and Overlays Section */
+.car-image-container {
+  position: relative;
+  width: 100%;
+  height: 220px; /* Fixed height for consistency */
+  overflow: hidden;
+}
+
+.main-car-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers area without stretching */
+}
+
+/* 'Available Now' Badge (Matching exact design) */
+.status-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+}
+
+.car-available {
+  background-color: #3b82f6; /* Exact blue color */
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Price Tag Overlay (Matching exact design) */
+.price-overlay {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: #000000; /* Pitch black background */
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.price-val {
+  font-size: 1.4rem; /* Prominent price */
+  font-weight: 800; /* Very bold */
+}
+
+.price-unit {
+  font-size: 0.9rem;
+  font-weight: 400; /* Regular text for unit */
+  opacity: 0.8; /* Slightly softer than the price */
+}
+
+/* 2. Details Section (Text Content) */
+.car-detail {
+  padding: 25px; /* Ample padding for clean spacing */
+}
+
+.car-title {
+  margin-bottom: 20px; /* Space between title and details */
+}
+
+.car-title h3 {
+  font-size: 1.6rem; /* Large, bold car name */
+  color: #1a1a1a;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+
+.car-title p {
+  color: #666666; /* Muted gray for subtitle */
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* 3. Icon and Info Grid (Clean alignment) */
+.car-infomation {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 15px; /* Balanced space between items */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+
+.info-item img {
+  width: 22px; /* Set a specific size for icons */
+  height: 22px;
+  object-fit: contain;
+}
+
+.info-item span {
+  font-size: 0.95rem;
+  color: #4a5568; /* Slightly darker gray for readability */
+  font-weight: 500;
+}

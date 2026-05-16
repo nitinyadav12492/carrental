@@ -1,0 +1,48 @@
+.navbar-owner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 30px;
+background:#ffffff;
+border-bottom:1px solid #eee;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+/* logo */
+
+.owner-logo{
+width:130px;
+cursor:pointer;
+}
+
+/* right section */
+
+.navbar-owner-right{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+/* welcome text */
+
+.welcome-text{
+font-size:15px;
+color:#444;
+}
+
+.welcome-text span{
+font-weight:600;
+color:#111;
+}
+
+/* profile */
+
+.owner-profile{
+width:40px;
+height:40px;
+border-radius:50%;
+object-fit:cover;
+cursor:pointer;
+}

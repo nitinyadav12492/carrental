@@ -1,0 +1,173 @@
+/* Navbar Container */
+.navbar1{
+  width:100%;
+  margin: auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 40px;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+/* Logo */
+.logo img{
+  width:120px;
+}
+
+/* Menu Links */
+.mid{
+  display:flex;
+  gap:30px;
+}
+
+.mid a{
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+  position:relative;
+}
+
+/* Hover underline animation */
+.mid a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  left:0;
+  bottom:-5px;
+  background:#ff4d30;
+  transition:0.3s;
+}
+
+.mid a:hover::after{
+  width:100%;
+}
+
+/* Search Box */
+.search-box-nav1{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background:#f4f4f4;
+  padding:2px 10px;
+  border-radius:26px;
+}
+
+.search-box-nav1 input{
+  border:none;
+  outline:none;
+  background:transparent;
+  width: 150px;
+}
+
+.search-box-nav1 img{
+  width:18px;
+}
+.right{
+  display: flex;
+  gap: 10px;
+align-items: center;
+justify-content: flex-end;
+ 
+}
+
+/* Buttons */
+.right .btn{
+  display:flex;
+  width: auto;
+  gap:10px;
+}
+.bg-light{
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+.right .btn button{
+  padding:8px 16px;
+  border:none;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+.right .btn button:first-child{
+  background:#b026ff;
+  color:white;
+}
+
+.right .btn button:last-child{
+  border:1px solid #b026ff;
+  background:transparent;
+  color:#b026ff;
+}
+
+/* Hamburger menu */
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+  .mid{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:20px;
+    display:none;
+  }
+
+ .mid.active{
+  display:flex; 
+   }
+
+  .search-box{
+    display:none;
+  }
+
+  .btn{
+    display:none;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+}
+/* Mobile buttons inside menu */
+.mobile-btn{
+  display:none;
+  flex-direction:column;
+  gap:10px;
+}
+
+.mobile-btn button{
+  padding:8px 16px;
+  border:none;
+  border-radius:6px;
+  background:#b026ff;
+  color:white;
+  cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+  .btn{
+    display:none;
+  }
+
+  .mobile-btn{
+    display:flex;
+    margin-top:10px;
+  }
+
+}
