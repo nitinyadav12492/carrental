@@ -1,8 +1,7 @@
-.title-container {
+﻿.title-container {
   margin-bottom: 30px;
 }
 
-/* alignment options */
 .title-container.center {
   text-align: center;
 }
@@ -12,20 +11,20 @@
 }
 
 .title-heading {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  font-weight: 800;
   color: #111827;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .title-subtitle {
-  font-size: 16px;
-  color: #6b7280;
-  max-width: 600px;
+  font-size: 1rem;
+  color: #64748b;
+  max-width: 700px;
   margin: auto;
+  line-height: 1.8;
 }
 
-/* if left aligned */
 .title-container.left .title-subtitle {
   margin: 0;
 }

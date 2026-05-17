@@ -1,47 +1,84 @@
-.subscribe{
-width:90%;
-margin:80px auto;
-text-align:center;
+﻿.subscribe {
+  width: min(1100px, 100%);
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 24px;
 }
 
-.subscribe-title{
-font-size:42px;
-font-weight:700;
-margin-bottom:10px;
+.subscribe-title {
+  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #111827;
 }
 
-.subscribe-subtitle{
-color:#6b7280;
-margin-bottom:40px;
+.subscribe-subtitle {
+  color: #475569;
+  margin-bottom: 38px;
+  font-size: 1rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.subscribe-box{
-display:flex;
-max-width:750px;
-margin:auto;
-border:1px solid #e5e7eb;
-border-radius:10px;
-overflow:hidden;
+.subscribe-box {
+  display: flex;
+  max-width: 750px;
+  margin: 0 auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
 }
 
-.subscribe-input{
-flex:1;
-padding:16px;
-border:none;
-outline:none;
-font-size:16px;
+.subscribe-input {
+  flex: 1;
+  padding: 18px 22px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
 }
 
-.subscribe-btn{
-background:#b026ff ;
-color:white;
-border:none;
-padding:0 35px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
+.subscribe-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 34px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background 0.25s ease;
 }
 
-.subscribe-btn:hover{
-background:#1d4ed8;
+.subscribe-btn:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .subscribe-box {
+    flex-direction: column;
+  }
+
+  .subscribe-input {
+    padding: 16px 18px;
+  }
+
+  .subscribe-btn {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscribe {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .subscribe-title {
+    font-size: 2rem;
+  }
+
+  .subscribe-btn {
+    padding: 14px;
+  }
 }

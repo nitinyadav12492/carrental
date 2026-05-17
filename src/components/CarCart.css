@@ -1,122 +1,127 @@
-/* CarCart.css - Exact match with reference image */
-
-.car-card {
+﻿.car-card {
+  width: 100%;
+  max-width: 380px;
   background: #ffffff;
-  border-radius: 16px; /* Slightly softer corners for a premium feel */
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Clean, soft shadow */
-  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 360px; /* Adjust based on your layout needs */
-  border: 1px solid #f0f0f0; /* Optional: adds definition */
+  margin: 0 auto;
 }
 
 .car-card:hover {
-  transform: translateY(-5px); /* Lift on hover */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Deepen shadow on hover */
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.15);
 }
 
-/* 1. Image and Overlays Section */
 .car-image-container {
   position: relative;
   width: 100%;
-  height: 220px; /* Fixed height for consistency */
-  overflow: hidden;
+  height: 250px;
 }
 
 .main-car-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image covers area without stretching */
+  object-fit: cover;
 }
 
-/* 'Available Now' Badge (Matching exact design) */
 .status-badge {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 18px;
+  left: 18px;
   z-index: 2;
 }
 
 .car-available {
-  background-color: #3b82f6; /* Exact blue color */
+  background-color: #3b82f6;
   color: #ffffff;
   padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 13px;
-  font-weight: 600;
-  margin: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.16);
 }
 
-/* Price Tag Overlay (Matching exact design) */
 .price-overlay {
   position: absolute;
-  bottom: 15px;
-  right: 15px;
-  background-color: #000000; /* Pitch black background */
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 12px;
-  z-index: 2;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  bottom: 18px;
+  right: 18px;
+  background: rgba(15, 23, 42, 0.9);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }
 
 .price-val {
-  font-size: 1.4rem; /* Prominent price */
-  font-weight: 800; /* Very bold */
+  font-size: 1.4rem;
+  font-weight: 800;
 }
 
 .price-unit {
   font-size: 0.9rem;
-  font-weight: 400; /* Regular text for unit */
-  opacity: 0.8; /* Slightly softer than the price */
+  color: #d1d5db;
 }
 
-/* 2. Details Section (Text Content) */
 .car-detail {
-  padding: 25px; /* Ample padding for clean spacing */
-}
-
-.car-title {
-  margin-bottom: 20px; /* Space between title and details */
+  padding: 22px;
 }
 
 .car-title h3 {
-  font-size: 1.6rem; /* Large, bold car name */
-  color: #1a1a1a;
-  margin: 0 0 5px 0;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
   font-weight: 700;
+  color: #111827;
 }
 
 .car-title p {
-  color: #666666; /* Muted gray for subtitle */
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 18px;
 }
 
-/* 3. Icon and Info Grid (Clean alignment) */
 .car-infomation {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
-  gap: 15px; /* Balanced space between items */
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 14px;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between icon and text */
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #475569;
 }
 
 .info-item img {
-  width: 22px; /* Set a specific size for icons */
-  height: 22px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
-.info-item span {
-  font-size: 0.95rem;
-  color: #4a5568; /* Slightly darker gray for readability */
-  font-weight: 500;
+@media (max-width: 768px) {
+  .car-card {
+    max-width: 100%;
+  }
+
+  .car-infomation {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-detail {
+    padding: 18px;
+  }
+
+  .price-overlay {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    justify-content: space-between;
+  }
 }

@@ -1,71 +1,86 @@
-.testimonials{
-width:90%;
-margin:80px auto;
-text-align:center;
+﻿.testimonials {
+  width: min(1100px, 100%);
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 24px;
 }
 
-.testimonial-title h1{
-font-size:40px;
-margin-bottom:10px;
+.testimonial-title h1 {
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+  margin-bottom: 12px;
+  color: #111827;
 }
 
-.testimonial-title p{
-color:#6b7280;
-max-width:600px;
-margin:auto;
-margin-bottom:50px;
-line-height:1.6;
+.testimonial-title p {
+  color: #64748b;
+  max-width: 680px;
+  margin: 0 auto 50px;
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
-.testimonial-cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.testimonial-card{
-background:#ffffff;
-padding:30px;
-border-radius:15px;
-text-align:left;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+.testimonial-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 24px;
+  text-align: left;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.testimonial-card:hover{
-transform:translateY(-5px);
+.testimonial-card:hover {
+  transform: translateY(-4px);
 }
 
-.testimonial-user{
-display:flex;
-align-items:center;
-gap:15px;
-margin-bottom:15px;
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
 }
 
-.testimonial-user img{
-width:50px;
-height:50px;
-border-radius:50%;
-object-fit:cover;
+.testimonial-user img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.testimonial-user h3{
-margin:0;
-font-size:18px;
+.testimonial-user h3 {
+  margin: 0;
+  font-size: 1.1rem;
 }
 
-.testimonial-user span{
-font-size:14px;
-color:#6b7280;
+.testimonial-user span {
+  font-size: 0.95rem;
+  color: #64748b;
 }
 
-.stars{
-color:#2563eb;
-margin-bottom:15px;
+.stars {
+  color: #2563eb;
+  margin-bottom: 16px;
 }
 
-.review{
-color:#4b5563;
-line-height:1.6;
+.review {
+  color: #475569;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
 }
