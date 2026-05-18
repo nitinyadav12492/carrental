@@ -1,1004 +1,173 @@
-  /* .manage-bookings{
-padding:30px;
-}
-
-.manage-bookings h2{
-font-size:24px;
-margin-bottom:5px;
-}
-
-.subtitle{
-color:#6b7280;
-margin-bottom:20px;
-}
-
-.booking-card{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 15px rgba(0,0,0,0.05);
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-}
-
-thead{
-background:#f9fafb;
-}
-
-th{
-text-align:left;
-padding:14px;
-font-size:14px;
-color:#6b7280;
-}
-
-td{
-padding:14px;
-border-top:1px solid #eee;
-} */
-
-/* car info */
-
-/* .car-info{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.car-info img{
-width:45px;
-height:45px;
-border-radius:8px;
-object-fit:cover;
-} */
-
-/* status */
-
- /* .status{
-padding:5px 12px;
-border-radius:20px;
-font-size:12px;
-font-weight:500;
-}
-
-.green{
-background:#d1fae5;
-color:#065f46;
-}
-
-.blue{
-background:#dbeafe;
-color:#1e40af;
-}
-
-.yellow{
-background:#fef3c7;
-color:#92400e;
-} */ */
-
-/* button */
-
-
-
-
-
-
-  /* .manage-bookings {
+.manage-bookings {
+  min-height: calc(100vh - 80px);
   padding: 30px;
-  background: #f5f7fb;
-  min-height: 100vh;
+  background: #eef4fb;
+  color: #12263f;
 }
 
 .manage-bookings h2 {
-  font-size: 28px;
-  margin-bottom: 5px;
+  font-size: clamp(1.9rem, 2.3vw, 2.4rem);
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  color: #777;
-  margin-bottom: 25px;
-}
-
-/* Container */
-/* .booking-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 20px;
-} */
-
-/* Card */
-/* .booking-card {
-  background: white;
-  border-radius: 16px;
-  padding: 18px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.booking-card:hover {
-  transform: translateY(-5px);
-} */
-
-/* Car section */
-/* .car-section {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.car-section img {
-  width: 80px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* Details */
-/* .booking-details {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-/* Price */
-/* .price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333; */
-/* } */ */
-
-/* Status */
-/* .status {
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-  text-transform: capitalize;
-} */
-
-/* .status.pending {
-  background: #fff3cd;
-  color: #856404;
-}
-
-.status.confirmed {
-  background: #d4edda;
-  color: #155724;
-}
-
-.status.cancelled {
-  background: #f8d7da;
-  color: #721c24;
-} */
-
-/* Dropdown */
-/* select {
-  padding: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-} */
-
-/* Button */
-/* .cancel-btn {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 8px;
-  background: #ff4d4d;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-} */
-/* 
-.cancel-btn:hover {
-  background: #e60000;
-} */ 
- /* .manage-bookings {
-  padding: 30px;
-  background: #f4f6fb;
-}
-
-.booking-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 20px;
+  color: #52606d;
+  margin-bottom: 28px;
+  line-height: 1.75;
+  max-width: 680px;
 }
 
 .booking-card {
-  background: white;
-  border-radius: 16px;
-  padding: 18px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.booking-card:hover {
-  transform: translateY(-5px);
-}
-
-
-.car-section {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.car-section img {
-  width: 80px;
-  border-radius: 10px;
-}
-
-
-.booking-details {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
-  align-items: center;
-}
-
-
-.price {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-
-.status {
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-
-
-.status.pending {
-  background: #fff3cd;
-  color: #856404;
-}
-
-.status.confirmed {
-  background: #d4edda;
-  color: #155724;
-}
-
-.status.cancelled {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-.status.completed {
-  background: #d1ecf1;
-  color: #0c5460;
-}
-
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  background: white;
-  width: 160px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 28px;
   overflow: hidden;
-  z-index: 10;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
 }
 
-.dropdown-menu div {
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.dropdown-menu div:hover {
-  background: #f2f2f2;
-} */
-
-
-
-
-
-
- /* :root {
-  --primary: #2563eb;
-  --success: #10b981;
-  --danger: #ef4444;
-  --warning: #f59e0b;
-  --bg-soft: #f8fafc;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
-}
-
-.manage-bookings-container {
-  padding: 2rem;
-  background-color: var(--bg-soft);
-  min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-}
-
-.header-section {
-  margin-bottom: 2rem;
-}
-
-.header-section h2 {
-  font-size: 1.8rem;
-  color: var(--text-main);
-  margin-bottom: 0.5rem;
-}
-
-.header-section p {
-  color: var(--text-muted);
-}
-
-.bookings-wrapper {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.custom-table {
+.table-wrapper {
   width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-.custom-table th {
-  background-color: #f1f5f9;
-  padding: 1rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-}
-
-.custom-table td {
-  padding: 1.25rem 1rem;
-  border-bottom: 1px solid #e2e8f0;
-  vertical-align: middle;
-}
-
-/* Car Cell */
-/* .car-cell {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.car-thumb {
-  width: 80px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 6px;
-  background: #eee;
-}
-
-.car-name {
-  font-weight: 700;
-  color: var(--text-main);
-  margin: 0;
-}
-
-.car-id {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-} */ */
-
-/* Status Badges */
-/* .status-badge {
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.status-pending { background: #fef3c7; color: #92400e; }
-.status-confirmed { background: #d1fae5; color: #065f46; }
-.status-cancelled { background: #fee2e2; color: #991b1b; } */
-
-/* Buttons */
-/* .action-group {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.btn-approve, .btn-cancel, .btn-outline {
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.2s;
-  border: none;
-}
-
-.btn-approve {
-  background: var(--success);
-  color: white;
-}
-
-.btn-approve:hover { background: #059669; }
-
-.btn-cancel {
-  background: var(--danger);
-  color: white;
-}
-
-.btn-cancel:hover { background: #dc2626; }
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #cbd5e1;
-  color: var(--text-muted);
-}
-
-.btn-outline:hover:not(:disabled) {
-  background: #f1f5f9;
-  color: var(--danger);
-  border-color: var(--danger);
-}
-
-.btn-outline:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-} */
-
-/* Date Cell */
-/* .date-box {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.85rem;
-  color: var(--text-main);
-}
-
-.arrow {
-  color: var(--primary);
-  font-weight: bold;
-}
-.bookings-container {
-  padding: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.bookings-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 25px;
-}
-
-.bookings-header h1 { font-size: 24px; color: #1a1a1a; margin-bottom: 5px; }
-.bookings-header p { color: #666; font-size: 14px; }
-
-.table-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  border: 1px solid #eee;
-  overflow: hidden;
-}
-
-.bookings-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.bookings-table th {
-  background: #f9f9f9;
-  padding: 15px 20px;
-  text-align: left;
-  font-size: 13px;
-  color: #888;
-  text-transform: uppercase;
-  border-bottom: 1px solid #eee;
-}
-
-.bookings-table td {
-  padding: 15px 20px;
-  border-bottom: 1px solid #f5f5f5;
-  vertical-align: middle;
-} */
-
-/* Car Details Column */
-/* .car-details { display: flex; align-items: center; gap: 12px; }
-.car-details img { width: 60px; height: 40px; border-radius: 6px; object-fit: cover; }
-.car-details .brand { display: block; font-weight: 700; color: #333; }
-.car-details .model { font-size: 12px; color: #777; } */
-
-/* Date Pill */
-/* .rental-dates { font-size: 13px; font-weight: 500; }
-.to-text { margin: 0 8px; color: #2563eb; font-weight: bold; } */
-
-/* Status Badges */
-/* .badge {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.badge.pending { background: #fff7ed; color: #c2410c; }
-.badge.confirmed { background: #f0fdf4; color: #15803d; }
-.badge.cancelled { background: #fef2f2; color: #b91c1c; } */
-
-/* Action Buttons */
-/* .action-btns {
-  display: flex;
-  gap: 8px;
-  justify-content: flex-end;
-}
-
-.btn-approve, .btn-reject, .btn-cancel-only {
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s;
-  border: none;
-}
-
-.btn-approve { background: #2563eb; color: #fff; }
-.btn-approve:hover { background: #1d4ed8; }
-
-.btn-reject { background: #fff; border: 1px solid #e5e7eb; color: #374151; }
-.btn-reject:hover { background: #fef2f2; border-color: #fee2e2; color: #b91c1c; }
-
-.btn-cancel-only { background: transparent; color: #9ca3af; border: 1px solid #e5e7eb; }
-.btn-cancel-only:hover:not(:disabled) { border-color: #ef4444; color: #ef4444; }
-.btn-cancel-only:disabled { cursor: not-allowed; opacity: 0.5; } */
-/* .manage-bookings {
-  padding: 20px;
-}
-
-.subtitle {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.booking-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
   overflow-x: auto;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 720px;
 }
 
-th, td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid #eee;
+thead {
+  background: #f8fafc;
 }
 
-.car-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.car-info img {
-  width: 60px;
-  border-radius: 6px;
-} */
-
-/* STATUS DROPDOWN */
-/* .status-select {
-  padding: 5px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-} */
-
-/* PAYMENT */
-/* .payment {
-  background: #f5f5f5;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-}
-.date-cell {
-  white-space: nowrap;
-  font-size: 14px;
-} */
- /* .manage-bookings {
-  padding: 20px;
-}
-
-.subtitle {
-  color: gray;
-  margin-bottom: 20px;
-}
-
-
-.booking-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
+th,
+td {
+  padding: 18px 16px;
+  text-align: left;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
 }
 
 th {
-  text-align: left;
-  padding: 12px;
-  background: #f5f5f5;
-  font-size: 14px;
-}
-
-td {
-  padding: 12px;
-  border-bottom: 1px solid #eee;
-} */
-
-/* CAR INFO */
-/* .car-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.car-info img {
-  width: 60px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-
-.date-cell {
-  white-space: nowrap;
-  font-size: 14px;
-}
-
-
-.payment {
-  background: #e3f2fd;
-  color: #1976d2;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-}
-
-
-
-
-.status-badge {
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-
-.status-badge.pending {
-  background: #ffe8b3;
-  color: #b78103;
-}
-
-.status-badge.confirmed {
-  background: #d4f5e9;
-  color: #1b8f5a;
-}
-
-.status-badge.completed {
-  background: #dbeafe;
-  color: #2563eb;
-}
-
-.status-dropdown {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-} */
- /* .manage-bookings {
-  padding: 30px;
-  background-color: #f8fafc;
-  min-height: 100vh;
-}
-
-.header-info {
-  margin-bottom: 25px;
-}
-
-.header-info h2 {
-  font-size: 24px;
-  color: #1e293b;
-  margin-bottom: 5px;
-}
-
-.header-info .subtitle {
-  color: #64748b;
-  font-size: 14px;
-}
-
-/* Table Card Design */
-.table-container {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
-  overflow: hidden;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-thead th {
-  background-color: #f1f5f9;
-  padding: 15px 20px;
-  text-align: left;
-  font-size: 13px;
-  color: #475569;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-tbody tr {
-  border-bottom: 1px solid #f1f5f9;
-  transition: 0.2s;
-}
-
-tbody tr:hover {
-  background-color: #fcfcfc;
-}
-
-td {
-  padding: 15px 20px;
-  vertical-align: middle;
-  font-size: 14px;
-  color: #334155;
-}
-
-/* Car Cell Styling */
-.car-cell {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.car-cell img {
-  width: 60px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.car-name {
-  display: block;
-  font-weight: 700;
-  color: #1e293b;
-}
-
-.car-id {
-  font-size: 11px;
-  color: #94a3b8;
-} */
-
-/* Payment & Dates */
-/* .payment-method {
-  background: #f1f5f9;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
-.to-arrow {
-  color: #3b82f6;
-  font-weight: bold;
-} */
-
-/* Status Badges */
-/* .status-badge {
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.status-badge.pending { background: #fef3c7; color: #92400e; }
-.status-badge.confirmed { background: #d1fae5; color: #065f46; }
-.status-badge.cancelled { background: #fee2e2; color: #991b1b; }
-
-
-  .manage-bookings {
-  padding: 2rem;
-  background-color: #f8fafc;
-  min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-}
-
-.manage-bookings h2 {
-  font-size: 1.8rem;
-  color: #1e293b;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.subtitle {
-  color: #64748b;
-  margin-bottom: 2rem;
   font-size: 0.95rem;
-} 
-
-/* Table Container */
- .booking-card {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  border: 1px solid #e2e8f0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-} 
-
- thead th {
-  background-color: #f1f5f9;
-  padding: 1rem;
-  color: #475569;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-tbody tr {
-  border-bottom: 1px solid #f1f5f9;
-  transition: background 0.2s;
-}
-
-tbody tr:hover {
-  background-color: #f8fafc;
+  letter-spacing: 0.01em;
+  color: #52606d;
+  font-weight: 700;
 }
 
 td {
-  padding: 1rem;
+  font-size: 0.95rem;
+  color: #334e68;
   vertical-align: middle;
-  color: #334155;
-  font-size: 0.9rem;
-} 
+}
 
-/* Car Info Column */
 .car-info {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .car-info img {
-  width: 60px;
-  height: 40px;
+  width: 72px;
+  height: 52px;
+  border-radius: 14px;
   object-fit: cover;
-  border-radius: 6px;
-  background: #eee;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
-.car-info span {
-  font-weight: 600;
-  color: #1e293b;
-} 
-
-/* Date Cell */
- .date-cell {
-  line-height: 1.4;
-  color: #64748b;
-  font-size: 0.85rem;
-} 
-
-/* Payment Tag */
- .payment {
-  background: #f1f5f9;
-  color: #475569;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 600;
-} 
-
-
-
-
-
-
-/* .status-select {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 13px;
-  cursor: pointer;
+.payment-tag {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 0.86rem;
 }
 
-/* dynamic colors */
-/* .status-select.pending {
-  background: #f59e0b;
-}
-
-.status-select.confirmed {
-  background: #22c55e;
-}
-
-.status-select.cancelled {
-  background: #ef4444;
-} */ 
- /* SELECT BASE */
 .status-select {
-  padding: 7px 12px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  outline: none;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  background: #f8f9f8;
-  color: #111827;
-  transition: all 0.25s ease;
+  width: 100%;
+  max-width: 180px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: #f8fafc;
+  color: #334e68;
+  font-weight: 600;
 }
 
-/* HOVER */
-.status-select:hover {
-  border-color: #2563eb;
-}
-
-/* FOCUS (click) */
-.status-select:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-}
-
-/* PENDING */
 .status-select.pending {
-  background: #eff6ff;
-  color: #2563eb;
-  border: 1px solid #93c5fd;
+  background: rgba(254, 243, 199, 0.4);
 }
 
-/* CONFIRMED */
 .status-select.confirmed {
-  background: #84d4af;
-  color: #eef3f1;
-  border: 1px solid #6ee7b7;
+  background: rgba(219, 234, 254, 0.45);
 }
 
-/* CANCELLED */
 .status-select.cancelled {
-  background: #fef2f2;
-  color: #dc2626;
-  border: 1px solid #fca5a5;
+  background: rgba(254, 215, 215, 0.45);
 }
 
-/* DISABLED */
 .status-select:disabled {
-  background: #6988c7;
-  color: #f5f7fa;
+  opacity: 0.85;
   cursor: not-allowed;
-  border: 1px solid #e5e7eb;
+}
+
+.booking-card table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 1200px) {
+  .booking-card {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .manage-bookings {
+    padding: 26px;
+  }
+
+  table {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-card {
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+  }
+
+  th,
+  td {
+    padding: 14px 12px;
+  }
+
+  .car-info {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .manage-bookings {
+    padding: 20px 16px;
+  }
+
+  .booking-card {
+    border-radius: 22px;
+  }
+
+  th,
+  td {
+    padding: 12px 10px;
+  }
+
+  .payment-tag,
+  .status-select {
+    width: 100%;
+  }
+
+  .booking-card table {
+    display: block;
+    overflow-x: auto;
+    min-width: 100%;
+  }
 }

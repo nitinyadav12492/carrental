@@ -51,21 +51,18 @@ Track all customer bookings, approve or cancel requests, and manage booking stat
 </p>
 
 <div className="booking-card">
-
-<table>
-
-<thead>
-<tr>
-<th>Car</th>
-<th>Date Range</th>
-<th>Total</th>
-<th>Payment</th>
-<th>Status</th>
-
-</tr>
-</thead>
-
-<tbody>
+  <div className="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Car</th>
+          <th>Date Range</th>
+          <th>Total</th>
+          <th>Payment</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
 
 {bookings.map((booking)=>(
 
