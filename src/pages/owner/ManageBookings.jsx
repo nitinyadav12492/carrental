@@ -309,7 +309,7 @@
 // //     }
 // //   };
 
-// //   const changeBookingStatus = async (bookingId, status) ////=> {
+// //   const changeBookingStatus = async (bookingId, status) => {
 // //     try {
 // //       const { data } = await axios.post('/api/bookings/change-status', { bookingId, status });
 // //       if (data.success) {
