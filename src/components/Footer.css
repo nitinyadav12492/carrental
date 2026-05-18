@@ -1,9 +1,9 @@
 ﻿.footer {
-  width: min(1200px, 100%);
+  width: min(1320px, 100%);
   margin: 0 auto;
-  padding: 60px 24px 30px;
+  padding: 72px 24px 34px;
   color: #ffffff;
-  background: #1b0d4f;
+  background: #120a36;
 }
 
 .footer-container {
@@ -14,7 +14,7 @@
 }
 
 .footer-logo img {
-  width: 160px;
+  width: 170px;
   max-width: 100%;
   margin-bottom: 18px;
 }
@@ -22,8 +22,8 @@
 .footer-brand p {
   line-height: 1.8;
   margin-bottom: 20px;
-  max-width: 320px;
-  color: #d8d4ff;
+  max-width: 340px;
+  color: #c6c2ff;
 }
 
 .footer-socials {
@@ -35,7 +35,7 @@
   width: 24px;
   cursor: pointer;
   transition: transform 0.25s ease, opacity 0.25s ease;
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
 .footer-socials img:hover {
@@ -62,7 +62,7 @@
 
 .footer-links a {
   text-decoration: none;
-  color: #d8d4ff;
+  color: #c6c2ff;
   font-size: 0.95rem;
   transition: color 0.25s ease;
 }
@@ -73,19 +73,21 @@
 
 .footer-links p {
   font-size: 0.95rem;
-  color: #d8d4ff;
+  color: #c6c2ff;
   margin-bottom: 8px;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 40px;
-  padding-top: 20px;
+  padding-top: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   font-size: 0.95rem;
-  color: #d1d5db;
+  color: #b8b3ff;
 }
 
 .footer-policy {
@@ -112,7 +114,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    padding: 48px 20px 28px;
+    padding: 56px 20px 28px;
   }
 
   .footer-container {
@@ -138,7 +140,7 @@
 
 @media (max-width: 480px) {
   .footer {
-    padding: 36px 16px 24px;
+    padding: 42px 16px 24px;
   }
 
   .footer-socials {

@@ -1,20 +1,23 @@
 ﻿.navbar1 {
-  width: min(1200px, 100%);
+  width: min(1440px, 100%);
   margin: 0 auto;
-  padding: 18px 28px;
+  padding: 22px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  background: #ffffff;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.95);
 }
 
 .logo img {
-  width: 150px;
+  width: 165px;
   max-width: 100%;
 }
 
@@ -27,13 +30,15 @@
 }
 
 .mid a {
-  color: #1f2937;
+  color: #0f172a;
   font-weight: 600;
   position: relative;
   transition: color 0.25s ease;
+  padding: 6px 0;
 }
 
-.mid a:hover {
+.mid a:hover,
+.mid a.active {
   color: var(--primary);
 }
 
@@ -41,14 +46,15 @@
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   left: 0;
   bottom: -6px;
   background: var(--primary);
   transition: width 0.25s ease;
 }
 
-.mid a:hover::after {
+.mid a:hover::after,
+.mid a.active::after {
   width: 100%;
 }
 
@@ -56,20 +62,20 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #f5f7fb;
-  padding: 10px 14px;
+  background: #f8fafc;
+  padding: 12px 18px;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  min-width: 220px;
-  max-width: 320px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  min-width: 260px;
+  max-width: 360px;
 }
 
 .search-box-nav1 input {
   border: none;
   outline: none;
   background: transparent;
-  font-size: 14px;
-  color: #111827;
+  font-size: 0.95rem;
+  color: #0f172a;
 }
 
 .search-box-nav1 img {
@@ -79,7 +85,7 @@
 .right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -90,11 +96,11 @@
 }
 
 .right .btn button {
-  padding: 12px 20px;
-  border-radius: 14px;
+  padding: 13px 22px;
+  border-radius: 16px;
   border: none;
-  min-width: 120px;
-  font-weight: 600;
+  min-width: 130px;
+  font-weight: 700;
   transition: all 0.25s ease;
 }
 
@@ -106,14 +112,24 @@
 .right .btn button:last-child {
   background: transparent;
   color: var(--primary);
-  border: 1px solid var(--primary);
+  border: 1px solid rgba(91, 75, 255, 0.18);
 }
 
 .menu-toggle {
   display: none;
-  font-size: 26px;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
   cursor: pointer;
-  line-height: 1;
+  transition: background 0.25s ease;
+}
+
+.menu-toggle:hover {
+  background: rgba(91, 75, 255, 0.08);
 }
 
 .mobile-btn {
@@ -124,28 +140,24 @@
 
 .mobile-btn button {
   width: 100%;
-  padding: 12px 18px;
-  border-radius: 14px;
+  padding: 14px 18px;
+  border-radius: 16px;
   border: none;
   background: var(--primary);
   color: #ffffff;
   font-weight: 700;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .navbar1 {
-    padding: 16px 22px;
-  }
-
-  .mid {
-    gap: 20px;
+    padding: 18px 26px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar1 {
     align-items: flex-start;
-    padding: 16px 18px;
+    padding: 16px 20px;
   }
 
   .search-box-nav1,
@@ -154,21 +166,21 @@
   }
 
   .menu-toggle {
-    display: block;
+    display: grid;
   }
 
   .mid {
     position: absolute;
-    top: 72px;
+    top: 78px;
     left: 0;
     right: 0;
     width: 100%;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.98);
     flex-direction: column;
     align-items: stretch;
-    gap: 18px;
-    padding: 20px 22px 24px;
-    border-bottom: 1px solid #e5e7eb;
+    gap: 16px;
+    padding: 22px 22px 18px;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.95);
     display: none;
     box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
   }
@@ -179,9 +191,9 @@
 
   .mid a {
     width: 100%;
-    padding: 12px 0;
+    padding: 14px 0;
     text-align: center;
-    border-bottom: 1px solid #f1f5f9;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.95);
   }
 
   .mobile-btn {
@@ -190,16 +202,32 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .navbar1 {
-    padding: 14px 16px;
+    padding: 14px 18px;
   }
 
   .mid {
-    gap: 14px;
+    gap: 12px;
   }
 
   .mid a {
-    font-size: 14px;
+    font-size: 0.95rem;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar1 {
+    padding: 12px 14px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+

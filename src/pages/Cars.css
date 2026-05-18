@@ -1,7 +1,7 @@
 ﻿.cars-page {
-  width: min(1200px, 100%);
+  width: min(1320px, 100%);
   margin: 0 auto;
-  padding: 52px 24px 48px;
+  padding: 64px 24px 54px;
 }
 
 .cars-header {
@@ -14,12 +14,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  border: 1px solid #e5e7eb;
-  padding: 12px 16px;
-  border-radius: 16px;
-  max-width: 760px;
+  gap: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  padding: 14px 18px;
+  border-radius: 20px;
+  max-width: 780px;
   background: #ffffff;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.06);
 }
 
 .search-input1 {
@@ -32,7 +33,7 @@
 
 .search-icon,
 .filter-icon {
-  width: 18px;
+  width: 20px;
   cursor: pointer;
 }
 
@@ -56,6 +57,12 @@
   width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .cars-page {
+    padding: 60px 22px 52px;
+  }
+}
+
 @media (max-width: 1024px) {
   .cars-grid {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
@@ -64,14 +71,14 @@
 
 @media (max-width: 768px) {
   .cars-page {
-    padding: 42px 20px 36px;
+    padding: 52px 20px 46px;
   }
 
   .search-box2 {
     flex-direction: column;
     align-items: stretch;
     gap: 14px;
-    padding: 14px 16px;
+    padding: 16px 16px;
   }
 
   .cars-grid {
@@ -81,10 +88,10 @@
 
 @media (max-width: 480px) {
   .cars-page {
-    padding: 32px 16px 28px;
+    padding: 42px 16px 36px;
   }
 
   .search-box2 {
-    padding: 12px 14px;
+    padding: 14px 14px;
   }
 }

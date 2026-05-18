@@ -1,68 +1,73 @@
 ﻿.hero {
-  width: min(1200px, 100%);
+  width: min(1320px, 100%);
   margin: 0 auto;
-  padding: 64px 24px 48px;
+  padding: 72px 24px 48px;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 44px;
   align-items: center;
 }
 
 .hero-content {
-  max-width: 560px;
+  max-width: 640px;
 }
 
 .hero-content span {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 18px;
   color: var(--primary);
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  padding: 10px 16px;
+  background: rgba(91, 75, 255, 0.09);
+  border-radius: 999px;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.8rem, 4vw, 4.4rem);
-  line-height: 1.05;
+  font-size: clamp(3rem, 4vw, 4.6rem);
+  line-height: 0.98;
   margin-bottom: 24px;
-  color: #101828;
+  color: #0f172a;
 }
 
 .hero-content p {
   color: #475569;
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.85;
   margin-bottom: 32px;
-  max-width: 560px;
+  max-width: 590px;
 }
 
 .get-started-btn {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: #ffffff;
   border: none;
-  border-radius: 16px;
-  padding: 14px 26px;
+  border-radius: 18px;
+  padding: 16px 28px;
   font-size: 1rem;
   font-weight: 700;
-  box-shadow: 0 16px 30px rgba(176, 38, 255, 0.16);
+  box-shadow: 0 22px 45px rgba(91, 75, 255, 0.2);
 }
 
 .car-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(176, 38, 255, 0.08);
-  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(91, 75, 255, 0.12), rgba(255, 255, 255, 0.75));
+  border-radius: 32px;
   overflow: hidden;
-  padding: 20px;
+  padding: 26px;
 }
 
 .car-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 28px;
 }
 
 .form-container {
@@ -72,30 +77,31 @@
   gap: 18px;
   background: #ffffff;
   border-radius: 26px;
-  padding: 26px;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  padding: 28px;
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.95);
 }
 
 .input-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
 }
 
 .input-group label {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #475569;
 }
 
 .input-group select,
 .input-group input {
-  min-height: 50px;
+  min-height: 52px;
   background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 0 16px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  border-radius: 18px;
+  padding: 0 18px;
   font-size: 0.95rem;
   color: #111827;
 }
@@ -108,21 +114,27 @@
   border: none;
   border-radius: 18px;
   padding: 16px 22px;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: #ffffff;
   font-weight: 700;
   font-size: 0.98rem;
-  box-shadow: 0 16px 34px rgba(176, 38, 255, 0.14);
+  box-shadow: 0 18px 38px rgba(91, 75, 255, 0.18);
 }
 
 .search-btn img {
   width: 18px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
+  .hero {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 1200px) {
   .hero {
     grid-template-columns: 1fr;
-    padding: 48px 22px 36px;
+    padding: 64px 22px 40px;
   }
 
   .form-container {
@@ -135,27 +147,37 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hero {
-    padding: 42px 18px 32px;
     gap: 32px;
   }
 
   .hero-content h1 {
-    font-size: 2.8rem;
+    font-size: clamp(2.6rem, 5vw, 3.6rem);
   }
 
   .hero-content p {
-    font-size: 0.98rem;
+    font-size: 1rem;
   }
 
   .form-container {
     grid-template-columns: 1fr;
-    padding: 22px;
+    padding: 24px;
   }
 
   .search-btn {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 52px 18px 36px;
+  }
+
+  .form-container {
+    padding: 22px;
+    gap: 16px;
   }
 
   .car-image {
@@ -165,15 +187,20 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 32px 16px 24px;
+    padding: 36px 14px 28px;
   }
 
   .hero-content h1 {
-    font-size: 2.4rem;
+    font-size: 2.25rem;
   }
 
   .hero-content p {
-    font-size: 0.95rem;
+    font-size: 0.96rem;
+  }
+
+  .hero-content span {
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 
   .form-container {
@@ -187,11 +214,12 @@
 
   .input-group select,
   .input-group input {
-    min-height: 46px;
+    min-height: 48px;
   }
 
   .search-btn {
-    padding: 14px;
+    padding: 14px 18px;
     font-size: 0.95rem;
   }
 }
+
