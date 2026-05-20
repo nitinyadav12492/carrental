@@ -19,16 +19,17 @@
   flex: 1;
   padding: 32px;
   transition: padding 0.35s ease, transform 0.35s ease;
+  min-height: calc(100vh - 76px);
+}
+
+.owner-layout.menu-open .owner-content {
+  pointer-events: none;
 }
 
 @media (max-width: 1200px) {
   .owner-content {
     padding: 28px;
   }
-}
-
-.owner-layout.menu-open .owner-content {
-  pointer-events: none;
 }
 
 @media (max-width: 992px) {
@@ -46,6 +47,7 @@
     min-height: calc(100vh - 76px);
     z-index: 120;
     transition: transform 0.35s ease;
+    max-width: 90vw;
   }
 
   .owner-layout.menu-open .sidebar {
@@ -58,6 +60,11 @@
 }
 
 @media (max-width: 768px) {
+  .owner-body > :first-child {
+    width: 100%;
+    max-width: 100vw;
+  }
+
   .owner-content {
     padding: 18px 14px 24px;
   }
@@ -66,5 +73,9 @@
 @media (max-width: 480px) {
   .owner-content {
     padding: 14px 12px 18px;
+  }
+
+  .owner-body > :first-child {
+    width: 100%;
   }
 }

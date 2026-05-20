@@ -1,5 +1,6 @@
 ﻿.car-details-page {
-  width: min(1320px, 100%);
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 56px 24px 64px;
 }
@@ -11,6 +12,11 @@
   color: #475569;
   cursor: pointer;
   margin-bottom: 18px;
+  transition: color 0.25s ease;
+}
+
+.back-link:hover {
+  color: var(--primary);
 }
 
 .car-layout {
@@ -29,8 +35,9 @@
 }
 
 .car-title1 h1 {
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
   margin-bottom: 12px;
+  word-wrap: break-word;
 }
 
 .car-title1 p {
@@ -40,20 +47,20 @@
 
 .car-specs {
   display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
   margin: 24px 0;
 }
 
 .spec-box {
   background: #ffffff;
   padding: 18px;
-  border-radius: 18px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #334155;
   border: 1px solid rgba(226, 232, 240, 0.95);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
@@ -61,6 +68,7 @@
 
 .spec-box img {
   width: 24px;
+  height: 24px;
 }
 
 .car-desc {
@@ -68,25 +76,33 @@
 }
 
 .car-desc h3 {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   color: #111827;
+  font-size: 1.2rem;
 }
 
 .car-desc p {
   color: #475569;
-  line-height: 1.85;
+  line-height: 1.8;
+  font-size: 0.96rem;
 }
 
 .car-features {
-  margin-top: 36px;
+  margin-top: 32px;
+}
+
+.car-features h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #111827;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 18px;
-  margin-bottom: 80px;
+  margin-top: 16px;
+  margin-bottom: 60px;
 }
 
 .feature-item {
@@ -95,23 +111,28 @@
   gap: 12px;
   color: #334155;
   background: #ffffff;
-  padding: 18px;
-  border-radius: 18px;
+  padding: 16px;
+  border-radius: 16px;
   border: 1px solid rgba(226, 232, 240, 0.95);
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  font-size: 0.94rem;
 }
 
 .feature-item img {
   width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .car-booking {
   background: #ffffff;
   padding: 30px;
-  border-radius: 28px;
+  border-radius: 24px;
   box-shadow: 0 22px 58px rgba(15, 23, 42, 0.1);
   height: fit-content;
   border: 1px solid rgba(226, 232, 240, 0.95);
+  position: sticky;
+  top: 100px;
 }
 
 .price {
@@ -122,7 +143,7 @@
 }
 
 .price h2 {
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
   margin: 0;
 }
 
@@ -134,26 +155,34 @@
 .booking-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   margin-top: 18px;
 }
 
 .booking-form input {
-  padding: 16px 18px;
+  padding: 14px 16px;
   border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: 16px;
-  font-size: 0.95rem;
+  border-radius: 14px;
+  font-size: 0.94rem;
+  transition: border-color 0.25s ease;
+}
+
+.booking-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(91, 75, 255, 0.1);
 }
 
 .booking-form button {
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: white;
   border: none;
-  padding: 16px 18px;
-  border-radius: 16px;
+  padding: 14px 16px;
+  border-radius: 14px;
   cursor: pointer;
   font-weight: 700;
   transition: transform 0.25s ease;
+  font-size: 0.96rem;
 }
 
 .booking-form button:hover {
@@ -161,7 +190,7 @@
 }
 
 .note {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: #64748b;
   text-align: center;
   margin-top: 8px;
@@ -169,35 +198,64 @@
 
 @media (max-width: 1200px) {
   .car-details-page {
-    padding: 48px 22px 58px;
+    padding: 48px 22px 56px;
+  }
+
+  .car-specs {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 1024px) {
   .car-layout {
     grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .car-booking {
+    position: static;
+    top: auto;
   }
 
   .car-specs {
-    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .car-main-img {
+    max-height: 400px;
   }
 }
 
 @media (max-width: 768px) {
   .car-details-page {
-    padding: 42px 20px 48px;
+    padding: 40px 18px 48px;
+  }
+
+  .car-title1 h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 
   .car-specs {
     grid-template-columns: 1fr;
+    margin: 18px 0;
+  }
+
+  .spec-box {
+    padding: 14px;
+    font-size: 0.9rem;
+    gap: 8px;
   }
 
   .feature-item {
-    padding: 16px;
+    padding: 14px;
+    font-size: 0.9rem;
   }
 
   .car-booking {
@@ -205,38 +263,109 @@
   }
 
   .price h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .booking-form input,
+  .booking-form button {
+    padding: 12px 14px;
+    font-size: 0.92rem;
+  }
+
+  .features-grid {
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .car-details-page {
-    padding: 36px 16px 42px;
+    padding: 32px 14px 40px;
+  }
+
+  .back-link {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
   }
 
   .car-main-img {
-    border-radius: 24px;
-  }
-
-  .booking-form input {
-    padding: 14px 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .car-details-page {
-    padding: 28px 16px 32px;
+    border-radius: 20px;
+    margin-bottom: 20px;
   }
 
   .car-title1 h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
-  .booking-form input {
-    padding: 12px 14px;
+  .car-title1 p {
+    font-size: 0.9rem;
   }
 
+  .car-specs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .spec-box {
+    padding: 12px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  .spec-box img {
+    width: 20px;
+  }
+
+  .car-desc h3,
+  .car-features h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+
+  .car-desc p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .features-grid {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .feature-item {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  .car-booking {
+    padding: 20px;
+  }
+
+  .price {
+    margin-bottom: 14px;
+  }
+
+  .price h2 {
+    font-size: 1.5rem;
+  }
+
+  .price span {
+    font-size: 0.85rem;
+  }
+
+  .booking-form {
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .booking-form input,
   .booking-form button {
-    padding: 13px 14px;
+    padding: 12px 12px;
+    font-size: 0.9rem;
+  }
+
+  .note {
+    font-size: 0.85rem;
+    margin-top: 6px;
   }
 }

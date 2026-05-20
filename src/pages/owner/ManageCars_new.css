@@ -1,0 +1,345 @@
+/* PAGE */
+/* ManageCars.css */
+
+.managecars {
+  padding: 28px 24px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.managecars h2 {
+  font-size: 1.6rem;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.managecars .subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+/* Table Container Card */
+.table-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 700px;
+}
+
+thead th {
+  background-color: #f1f5f9;
+  padding: 16px 18px;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+td {
+  padding: 16px 18px;
+  vertical-align: middle;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+td.car-infoo {
+  vertical-align: middle;
+}
+
+/* Car Info Column */
+.car-infoo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.car-infoo div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.car-infoo img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f1f5f9;
+  flex-shrink: 0;
+}
+
+.car-infoo h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.car-infoo p {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* Category Styling */
+.category-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cat {
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 0.95rem;
+}
+
+.sub-cat {
+  font-size: 0.9rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+/* Status Badges */
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.bg-green {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.bg-red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-btn,
+.delete-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.view-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: #fff;
+  border-color: #ef4444;
+}
+
+.view-btn:hover {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.delete-btn:hover {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .managecars {
+    padding: 24px 22px;
+  }
+
+  td,
+  thead th {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .managecars {
+    padding: 20px 18px;
+  }
+
+  .managecars h2 {
+    font-size: 1.4rem;
+  }
+
+  td,
+  thead th {
+    padding: 12px 14px;
+  }
+
+  .car-infoo img {
+    width: 50px;
+    height: 35px;
+  }
+
+  .car-infoo h4 {
+    font-size: 0.9rem;
+  }
+
+  .car-infoo p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .managecars {
+    padding: 18px 16px;
+  }
+
+  .managecars h2 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  .managecars .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+
+  .table-card {
+    border-radius: 12px;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  td,
+  thead th {
+    padding: 12px 12px;
+    font-size: 0.85rem;
+  }
+
+  .car-infoo {
+    gap: 10px;
+  }
+
+  .car-infoo img {
+    width: 45px;
+    height: 30px;
+  }
+
+  .car-infoo h4 {
+    font-size: 0.85rem;
+  }
+
+  .car-infoo p {
+    font-size: 0.75rem;
+  }
+
+  .main-cat {
+    font-size: 0.85rem;
+  }
+
+  .sub-cat {
+    font-size: 0.8rem;
+  }
+
+  .status {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+
+  .view-btn,
+  .delete-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .managecars {
+    padding: 14px 12px;
+  }
+
+  .managecars h2 {
+    font-size: 1.1rem;
+  }
+
+  .managecars .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+
+  table {
+    min-width: 500px;
+  }
+
+  td,
+  thead th {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+
+  .car-infoo {
+    gap: 8px;
+  }
+
+  .car-infoo img {
+    width: 40px;
+    height: 27px;
+  }
+
+  .car-infoo h4 {
+    font-size: 0.8rem;
+  }
+
+  .car-infoo p {
+    font-size: 0.7rem;
+  }
+
+  .view-btn,
+  .delete-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}

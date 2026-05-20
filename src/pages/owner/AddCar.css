@@ -215,9 +215,8 @@ background:#1d4ed8;
 
 /* PAGE */
 .addcar-page {
-  padding: 20px;
-  /* margin-left: 260px; sidebar space */
-  background: #f8fafc; /* light bg */
+  padding: 28px 24px;
+  background: #f8fafc;
   min-height: 100vh;
 }
 
@@ -226,47 +225,50 @@ background:#1d4ed8;
   width: 100%;
   max-width: 700px;
   background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 28px;
+  border-radius: 18px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
 }
 
 /* TITLE */
 .addcar-card h2 {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   color: #111827;
-  
+  font-size: 1.6rem;
+  font-weight: 700;
 }
-.preview {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* 🔥 important */
-  border-radius: 10px;
-  background: #fff;
-}
+
+/* SUBTITLE */
 .subtitle {
-  font-size: 13px;
+  font-size: 0.95rem;
   color: #6b7280;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 /* UPLOAD */
 .upload-section {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .upload-box {
   width: 100%;
-  height: 140px;
+  height: 160px;
   border: 2px dashed #cbd5f5;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
   background: #f1f5ff;
+  transition: all 0.25s ease;
+}
+
+.upload-box:hover {
+  border-color: var(--primary);
+  background: rgba(91, 75, 255, 0.05);
 }
 
 .upload-box img {
@@ -276,79 +278,90 @@ background:#1d4ed8;
 
 .upload-box p {
   color: #2563eb;
-  font-size: 14px;
+  font-size: 0.95rem;
+  margin: 0;
 }
 
 /* IMAGE PREVIEW */
 .preview {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
+  background: #fff;
 }
 
 /* GRID */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 /* INPUT GROUP */
 .input-group {
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 
 .input-group label {
-  font-size: 13px;
-  margin-bottom: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
   color: #374151;
+  font-weight: 600;
 }
 
 /* INPUTS */
 .input-group input,
 .input-group select,
 .input-group textarea {
-  padding: 10px;
+  padding: 12px 14px;
   border: 1px solid #dbeafe;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #ffffff;
   color: #111827;
   outline: none;
-  transition: 0.2s;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  font-family: inherit;
 }
 
 /* FOCUS EFFECT */
 .input-group input:focus,
 .input-group select:focus,
 .input-group textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 /* FULL WIDTH */
 .input-group.full {
-  margin-top: 15px;
+  grid-column: 1 / -1;
+  margin-top: 0;
 }
 
 /* BUTTON */
 .submit-btn {
-  margin-top: 20px;
+  margin-top: 24px;
   width: 100%;
-  padding: 12px;
-  background: #2563eb;
+  padding: 14px 16px;
+  background: var(--primary);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   color: #fff;
   cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.96rem;
 }
 
 /* HOVER */
 .submit-btn:hover {
-  background: #1e40af;
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(91, 75, 255, 0.2);
 }
 
 /* ACTIVE */
@@ -360,15 +373,132 @@ background:#1d4ed8;
 .submit-btn:disabled {
   background: #93c5fd;
   cursor: not-allowed;
+  transform: none;
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .addcar-page {
-    margin-left: 0;
+    padding: 24px 22px;
+  }
+
+  .addcar-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .addcar-page {
+    padding: 20px 18px;
+  }
+
+  .addcar-card {
+    max-width: 100%;
+    padding: 20px;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .addcar-page {
+    padding: 18px 16px;
+  }
+
+  .addcar-card {
+    padding: 18px;
+  }
+
+  .addcar-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .upload-box {
+    height: 140px;
+  }
+
+  .form-grid {
+    gap: 12px;
+  }
+
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    padding: 10px 12px;
+    font-size: 0.92rem;
+  }
+
+  .submit-btn {
+    padding: 12px 14px;
+    font-size: 0.92rem;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addcar-page {
+    padding: 14px 12px;
+  }
+
+  .addcar-card {
+    padding: 14px;
+  }
+
+  .addcar-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+  }
+
+  .upload-section {
+    margin-bottom: 18px;
+  }
+
+  .upload-box {
+    height: 120px;
+  }
+
+  .upload-box img {
+    width: 36px;
+    margin-bottom: 8px;
+  }
+
+  .upload-box p {
+    font-size: 0.85rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .input-group label {
+    font-size: 0.85rem;
+  }
+
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    padding: 10px 11px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 11px 12px;
+    font-size: 0.9rem;
+    margin-top: 16px;
   }
 }
