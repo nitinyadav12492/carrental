@@ -1,343 +1,305 @@
-﻿/* ===== IMPORTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
-
-/* ===== VARIABLES ===== */
-:root {
-  --page-bg:       #e9e9f2;
-  --card-bg:       #ffffff;
-  --accent:        #4f52c9;
-  --accent-dark:   #3b3ea8;
-  --accent-glow:   rgba(79, 82, 201, 0.32);
-  --blob:          #5558d4;
-  --ink:           #111827;
-  --ink-mid:       #4b5563;
-  --ink-muted:     #9ca3af;
-  --border:        #e5e7eb;
-  --label-color:   #4f52c9;
-  --font:          'Manrope', sans-serif;
-  --ease:          cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ===== PAGE BACKGROUND ===== */
-body { background: var(--page-bg); margin: 0; }
-
-/* ===== HERO SHELL ===== */
+﻿/* Container styling to replicate the main outer card in your picture */
 .hero {
-  font-family: var(--font);
-  background: var(--page-bg);
-  min-height: 100vh;
-  padding: 36px 36px 52px;
-  box-sizing: border-box;
-
-  /* 2-col grid: content left, car right — form spans full width below */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr auto;
-  grid-template-areas:
-    "content  car"
-    "form     form";
-  background: var(--card-bg);          /* white card fills the grid area */
-  border-radius: 28px;
-  box-shadow: 0 4px 40px rgba(79,82,201,0.09);
-  overflow: visible;
   position: relative;
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 60px 80px 140px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow: visible;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
-/* Diagonal stripe top-right decoration */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; right: 0;
-  width: 240px; height: 240px;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(79,82,201,0.055) 0px,
-    rgba(79,82,201,0.055) 1px,
-    transparent 1px,
-    transparent 13px
-  );
-  border-radius: 0 28px 0 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ===== HERO CONTENT ===== */
+/* Left side typography styling */
 .hero-content {
-  grid-area: content;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 56px 40px 48px 56px;
-  position: relative;
-  z-index: 2;
-  animation: fadeUp 0.55s var(--ease) both;
+  align-items: flex-start;
+  z-index: 5;
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(22px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Discount label */
 .hero-content span {
-  font-size: 0.82rem;
+  color:  rgba(224,61,30,0.55);
+  font-size: 14px;
   font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.01em;
-  animation: fadeUp 0.5s 0.05s var(--ease) both;
+  margin-bottom: 12px;
 }
 
-/* Headline */
 .hero-content h1 {
-  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-size: 56px;
   font-weight: 800;
-  line-height: 1.13;
-  color: var(--ink);
-  letter-spacing: -0.025em;
-  margin: 0;
-  animation: fadeUp 0.5s 0.10s var(--ease) both;
+  color: #11142d;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+  letter-spacing: -1px;
 }
 
-/* Body */
 .hero-content p {
-  font-size: 0.93rem;
-  font-weight: 400;
-  line-height: 1.75;
-  color: var(--ink-muted);
-  max-width: 380px;
-  margin: 0;
-  animation: fadeUp 0.5s 0.15s var(--ease) both;
+  color: #808191;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 420px;
+  margin: 0 0 30px 0;
 }
 
-/* CTA */
 .get-started-btn {
-  font-family: var(--font);
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #fff;
-  background: var(--accent);
+  background-color:  rgba(224,61,30,0.55);
+  color: #ffffff;
   border: none;
-  border-radius: 10px;
-  padding: 13px 30px;
+  border-radius: 6px;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  width: fit-content;
-  letter-spacing: 0.01em;
-  box-shadow: 0 4px 18px var(--accent-glow);
-  transition: background 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
-  animation: fadeUp 0.5s 0.20s var(--ease) both;
+  transition: background 0.2s ease;
 }
+
 .get-started-btn:hover {
-  background: var(--accent-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 28px var(--accent-glow);
+  background-color: rgba(224,61,30,0.55);
 }
-.get-started-btn:active { transform: translateY(0); }
 
-/* ===== CAR IMAGE ===== */
+/* Right side Image Wrapper with the precise blue background block layout */
 .car-image {
-  grid-area: car;
   position: relative;
+  width: 48%;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 0 28px 0 0;
-  animation: fadeUp 0.65s 0.10s var(--ease) both;
-}
-
-/* Purple blob — same shape as reference */
-.car-image::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 68%;
-  background: var(--blob);
-  border-radius: 55% 45% 0 0 / 65% 65% 0 0;
-  z-index: 0;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .car-image img {
-  position: relative;
-  z-index: 1;
-  width: 108%;
-  max-width: 580px;
+  width: 100%;
+  max-width: 540px;
   height: auto;
   object-fit: contain;
-  transform: translateX(4%);
-  filter: drop-shadow(0 14px 36px rgba(79,82,201,0.20));
-  animation: carFloat 5s ease-in-out infinite;
-}
-
-@keyframes carFloat {
-  0%, 100% { transform: translateX(4%) translateY(0); }
-  50%       { transform: translateX(4%) translateY(-9px); }
-}
-
-/* ===== FORM ===== */
-.form-container {
-  grid-area: form;
-  display: flex;
-  align-items: stretch;
-  background: #ffffff;
-  border-radius: 18px;
-  margin: 0 40px -28px 40px; /* pulls below the card */
-  box-shadow: 0 8px 32px rgba(0,0,0,0.11), 0 2px 8px rgba(0,0,0,0.06);
-  overflow: hidden;
-  border: 1px solid var(--border);
   position: relative;
-  z-index: 10;
-  animation: fadeUp 0.6s 0.28s var(--ease) both;
+  z-index: 3;
 }
 
-/* ===== INPUT GROUP ===== */
+/* The exact blue parallelogram geometry under the wheels */
+.car-image::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 90%;
+  height: 125px;
+  background-color:  rgba(224,61,30,0.55);
+  transform: skewY(-8deg);
+  z-index: 1;
+}
+
+/* The Floating White Search Widget Dock */
+.form-container {
+  position: absolute;
+  bottom: -45px;
+  left: 80px;
+  right: 80px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1fr 1fr auto;
+  align-items: center;
+  padding: 20px 0 20px 30px;
+  z-index: 10;
+}
+
+/* Individual data value inputs columns styling */
 .input-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 7px;
-  flex: 1;
-  padding: 18px 24px;
-  border-right: 1px solid var(--border);
-  min-width: 0;
-  transition: background 0.18s var(--ease);
+  padding-right: 15px;
 }
-
-.input-group:hover { background: #f9fafb; }
-.input-group:last-of-type { border-right: none; }
 
 .input-group label {
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--label-color);
-  white-space: nowrap;
+  color:  rgba(224,61,30,0.55);
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 
+/* Inputs, drop-downs styled to match your placeholder value text layout */
 .input-group select,
 .input-group input[type="date"] {
-  font-family: var(--font);
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--ink-mid);
-  background: transparent;
   border: none;
   outline: none;
-  appearance: none;
-  -webkit-appearance: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  color: #11142d;
+  font-family: inherit;
   cursor: pointer;
-  width: 100%;
   padding: 0;
-  line-height: 1.5;
+  width: 100%;
 }
 
-.input-group select:focus,
-.input-group input[type="date"]:focus {
-  color: var(--ink);
+/* Customizing the date picker arrow presentation */
+.input-group input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.4;
+  cursor: pointer;
 }
 
+/* Right-most solid submit button block */
 /* ===== SEARCH BUTTON ===== */
 .search-btn {
+  /* Base */
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-family: var(--font);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #fff;
-  background: var(--accent);
+
+  /* Size */
+  height: 100%;
+  min-height: 64px;
+  padding: 0 32px;
+
+  /* Colours — matches Navbar accent #e03d1e */
+  background: #e03d1e;
+  color: #ffffff;
   border: none;
+
+  /* Shape */
+  border-radius: 35px;
+
+  /* Typography */
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  /* Shadow */
+  box-shadow:
+    0 4px 16px rgba(224, 61, 30, 0.38),
+    0 1px 4px  rgba(224, 61, 30, 0.20);
+
   cursor: pointer;
-  padding: 0 44px;
-  letter-spacing: 0.02em;
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.2s var(--ease);
+  transition:
+    background   0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    transform    0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow   0.22s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Icon inside button */
 .search-btn img {
   width: 17px;
   height: 17px;
   filter: brightness(0) invert(1);
   flex-shrink: 0;
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.search-btn:hover { background: var(--accent-dark); }
+/* ── Shine sweep ── */
+.search-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -90%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    118deg,
+    transparent,
+    rgba(255, 255, 255, 0.22),
+    transparent
+  );
+  transition: left 0.55s ease;
+  pointer-events: none;
+}
 
-/* shine sweep */
+/* ── Pulsing ring on idle ── */
 .search-btn::after {
   content: '';
   position: absolute;
-  top: 0; left: -80%;
-  width: 55%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.16), transparent);
-  transition: left 0.5s ease;
-}
-.search-btn:hover::after { left: 150%; }
-
-/* ===== RESPONSIVE — TABLET ===== */
-@media (max-width: 1024px) {
-  .hero {
-    padding: 28px 28px 44px;
-  }
-  .hero-content {
-    padding: 44px 28px 40px 40px;
-  }
-  .form-container {
-    margin: 0 24px -24px 24px;
-  }
-  .hero-content h1 { font-size: 2.2rem; }
+  inset: 0;
+  border-radius: 35px;
+  box-shadow: 0 0 0 0 rgba(224, 61, 30, 0.45);
+  animation: btnPulse 2.8s ease-out infinite;
+  pointer-events: none;
 }
 
-/* ===== RESPONSIVE — MOBILE ===== */
-@media (max-width: 768px) {
+@keyframes btnPulse {
+  0%   { box-shadow: 0 0 0 0   rgba(224, 61, 30, 0.45); }
+  60%  { box-shadow: 0 0 0 10px rgba(224, 61, 30, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(224, 61, 30, 0); }
+}
+
+/* ── Hover state ── */
+.search-btn:hover {
+  background: #b82e12;
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 28px rgba(224, 61, 30, 0.48),
+    0 2px 8px  rgba(224, 61, 30, 0.22);
+}
+
+.search-btn:hover::before { left: 150%; }
+
+.search-btn:hover img {
+  transform: scale(1.15) rotate(-6deg);
+}
+
+/* ── Active / pressed ── */
+.search-btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 3px 10px rgba(224, 61, 30, 0.30),
+    0 1px 3px  rgba(224, 61, 30, 0.16);
+}
+
+/* ── Focus ring (accessibility) ── */
+.search-btn:focus-visible {
+  outline: 3px solid rgba(224, 61, 30, 0.55);
+  outline-offset: 3px;
+}
+/* .search-btn:hover {
+  background-color: #3235b3;
+}
+
+.search-btn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+} */
+
+/* Clean collapse behavior breakdown configuration adjustments */
+@media (max-width: 992px) {
   .hero {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "content"
-      "car"
-      "form";
-    padding: 0 0 44px;
-    border-radius: 20px;
-  }
-
-  .hero::before { display: none; }
-
-  .hero-content {
-    padding: 40px 28px 28px;
-    text-align: center;
-    align-items: center;
-  }
-  .hero-content p { max-width: 100%; }
-
-  .car-image {
-    border-radius: 0;
-    min-height: 240px;
-  }
-  .car-image img {
-    width: 95%;
-    transform: none;
-  }
-
-  .form-container {
     flex-direction: column;
-    margin: 0 16px -20px;
-    border-radius: 16px;
+    padding: 40px 30px 200px 30px;
+    gap: 40px;
+    margin: 20px;
   }
-  .input-group {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
+  .hero-content {
+    max-width: 100%;
   }
-  .input-group:last-of-type { border-bottom: none; }
+  .car-image {
+    width: 100%;
+    justify-content: center;
+  }
+  .car-image::after {
+    right: 0;
+    width: 100%;
+  }
+  .form-container {
+    grid-template-columns: 1fr;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+    gap: 20px;
+    bottom: -150px;
+  }
   .search-btn {
-    padding: 18px;
-    font-size: 1rem;
+    width: 100%;
+    border-radius: 4px;
   }
 }

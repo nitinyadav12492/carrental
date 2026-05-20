@@ -189,7 +189,7 @@
 .banner-content::before {
   content: '✦ OWNERS PROGRAM';
   display: block;
-  font-family: 'Outfit', sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -203,7 +203,7 @@
 
 /* Headline */
 .banner-title {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(2.6rem, 4vw, 4.2rem);
   line-height: 0.97;
   letter-spacing: 0.02em;
@@ -221,7 +221,7 @@
 
 /* Body text */
 .banner-text {
-  font-family: 'Outfit', sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 0.95rem;
   font-weight: 300;
   line-height: 1.85;
@@ -238,7 +238,7 @@
 }
 
 .banner-features span {
-  font-family: 'Outfit', sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.05em;

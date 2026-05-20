@@ -33,7 +33,7 @@
   position: absolute;
   top: -60px;
   right: 60px;
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 26rem;
   color: rgba(224, 61, 30, 0.05);
   line-height: 1;
@@ -64,7 +64,7 @@
 
 .testimonials h2,
 .testimonials .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: var(--t-ink);
@@ -74,7 +74,7 @@
 
 .testimonials p.subtitle,
 .testimonials .section-subtitle {
-  font-family: 'Outfit', sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 0.95rem;
   font-weight: 300;
   color: var(--t-muted);

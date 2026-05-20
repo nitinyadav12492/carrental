@@ -1,7 +1,9 @@
 .owner-layout {
   width: 100%;
   min-height: 100vh;
-  background: #eef4fb;
+  /* background: #eef4fb; */
+  /* background:#e03d1e; */
+  background: rgb(86, 85, 85);
 }
 
 .owner-body {
@@ -78,4 +80,7 @@
   .owner-body > :first-child {
     width: 100%;
   }
-}
+} */
+ /* Custom properties for consistency */
+/* Core App Variables */
+/* Core Global Layout Token Variables

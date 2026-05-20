@@ -41,7 +41,7 @@
 }
 
 .subscribe-btn {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  background: #e03d1e;
   color: white;
   border: none;
   padding: 0 36px;

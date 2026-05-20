@@ -69,7 +69,7 @@ const Dashboard = () => {
         <div>
           <span className="eyebrow">Owner Dashboard</span>
           <h1>Modern fleet analytics & management</h1>
-          <p>
+          <p className="para">
             Track revenue, bookings, and fleet performance across all devices with
             a premium admin experience.
           </p>

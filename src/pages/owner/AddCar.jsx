@@ -74,61 +74,7 @@ const AddCar = () => {
       setIsLoading(false)
     }
   };
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
 
-//   // prevent double submission
-//   if (isloading) return;
-
-//   // check if image is uploaded
-//   if (!image) {
-//     toast.error("Please upload an image of the car");
-//     return;
-//   }
-
-//   setIsLoading(true);
-
-//   try {
-//     // Prepare FormData
-//     const formData = new FormData();
-//     formData.append("image", image);
-//     formData.append("carData", JSON.stringify(car));
-
-//     // // Send request with Authorization header
-//     // const { data } = await axios.post("/api/owner/add-car", formData, {
-//     //   headers: {
-//     //     "Content-Type": "multipart/form-data",
-//     //     Authorization: `Bearer ${token}`, // JWT token from context
-//     //   },
-//     // });
-
-//     if (data.success) {
-//       toast.success(data.message);
-
-//       // reset form
-//       setImage(null);
-//       setCar({
-//         brand: "",
-//         model: "",
-//         year: 0,
-//         pricePerDay: 0,
-//         category: "",
-//         transmission: "",
-//         fuel_type: "",
-//         seats: 0,
-//         location: "",
-//         description: "",
-//       });
-//     } else {
-//       toast.error(data.message);
-//     }
-//   } catch (error) {
-//     console.log(error);
-//     toast.error(error.response?.data?.message || error.message);
-//   } finally {
-//     setIsLoading(false);
-//   }
-// };
   return (
     <div className="addcar-page">
       <div className="addcar-card">

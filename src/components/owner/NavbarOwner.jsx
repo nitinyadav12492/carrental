@@ -14,7 +14,7 @@ const NavbarOwner = ({ onToggleMenu, mobileMenuOpen }) => {
           <span className={`hamburger ${mobileMenuOpen ? "open" : ""}`} />
         </button>
 
-        <Link to="/owner" className="owner-logo-wrapper">
+        <Link to="/" className="owner-logo-wrapper">
           <img className="owner-logo" src={assets.logo} alt="logo" />
         </Link>
       </div>
