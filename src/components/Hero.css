@@ -306,3 +306,39 @@
   }
 }
 
+@media (min-width: 1920px) {
+  .hero {
+    padding: 88px 32px 56px;
+    gap: 56px;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-content h1 {
+    font-size: 5.2rem;
+    margin-bottom: 28px;
+  }
+
+  .hero-content p {
+    font-size: 1.15rem;
+    margin-bottom: 36px;
+  }
+
+  .form-container {
+    padding: 32px;
+    gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .search-btn {
+    grid-column: span 1;
+    width: auto;
+  }
+
+  .car-image {
+    min-height: 500px;
+  }
+}
+

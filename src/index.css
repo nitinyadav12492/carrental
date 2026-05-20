@@ -72,6 +72,18 @@ textarea {
   padding: 0 24px;
 }
 
+@media (max-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
 @media (max-width: 1200px) {
   .container {
     padding: 0 22px;
@@ -87,6 +99,13 @@ textarea {
 @media (max-width: 480px) {
   .container {
     padding: 0 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    width: 1600px;
+    padding: 0 32px;
   }
 }
 
