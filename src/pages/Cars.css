@@ -133,3 +133,42 @@
     margin-bottom: 16px;
   }
 }
+
+@media (max-width: 375px) {
+  .cars-page {
+    padding: 28px 10px 24px;
+  }
+
+  .cars-header {
+    margin-bottom: 20px;
+  }
+
+  .cars-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .search-box2 {
+    padding: 10px 10px;
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .search-input1 {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .search-icon,
+  .filter-icon {
+    width: 18px;
+  }
+
+  .cars-count {
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+
+  .cars-grid {
+    gap: 16px;
+  }
+}

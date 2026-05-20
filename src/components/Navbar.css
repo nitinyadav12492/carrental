@@ -674,6 +674,21 @@
 
 @media (max-width: 400px) {
   .navbar1 {
-    padding: 12px 14px;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  .mid a {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .mobile-btn button {
+    padding: 10px 12px;
+    font-size: 0.75rem;
   }
 }

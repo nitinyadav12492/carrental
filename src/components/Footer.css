@@ -551,3 +551,43 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 375px) {
+  .footer-container {
+    padding: 32px 14px 24px;
+    gap: 24px;
+  }
+
+  .footer-brand > p {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .footer-logo img {
+    height: 28px;
+  }
+
+  .footer-links h3 {
+    font-size: 0.65rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-links ul li a {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    padding: 14px 14px 18px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.7rem;
+  }
+
+  .footer-policy {
+    gap: 6px;
+  }
+
+  .footer-policy span {
+    font-size: 0.7rem;
+  }
+}
