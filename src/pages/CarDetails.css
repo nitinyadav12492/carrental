@@ -1,4 +1,4 @@
-﻿.car-details-page {
+﻿/* .car-details-page {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -367,5 +367,332 @@
   .note {
     font-size: 0.85rem;
     margin-top: 6px;
+  }
+} */
+/* Core Styling Variables & Page Frame */
+.car-details-page {
+  --brand-color: #e03d1e;
+  --brand-hover: #b82f16;
+  --brand-alpha: rgba(224, 61, 30, 0.05);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --bg-surface: #ffffff;
+  --border-light: #e2e8f0;
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.02);
+  --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.04);
+
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  font-family: inherit;
+  animation: fadeInDetail 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInDetail {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading State Styling */
+.loading {
+  text-align: center;
+  padding: 80px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Back Navigation Link Button */
+/* Premium Back Navigation Link Button */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 18px;
+  border: 1px solid var(--border-light);
+  border-radius: 30px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover State - Smooth Shift and Color Swap */
+.back-link:hover {
+  color: var(--brand-color);
+  border-color: rgba(224, 61, 30, 0.2);
+  background-color: rgba(224, 61, 30, 0.02);
+  box-shadow: 0 4px 12px rgba(224, 61, 30, 0.06);
+  transform: translateX(-4px); /* Gently pulls back to guide the user's eye */
+}
+
+/* Active Press Visual Feedback */
+.back-link:active {
+  transform: translateX(-2px) scale(0.98);
+}
+
+/* --- Layout Split Matrix Setup --- */
+.car-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-light);
+  margin: 24px 0;
+}
+
+/* =========================================
+   LEFT SIDE MODULES
+   ========================================= */
+
+/* Main Car Showcase Image */
+.car-main-img {
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 16px;
+  background-color: #f1f5f9;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Header Info Block */
+.car-title1 {
+  margin-top: 24px;
+}
+
+.car-title1 h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0 0 6px 0;
+  letter-spacing: -0.75px;
+}
+
+.car-title1 p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Specifications Horizontal Pill Row */
+.car-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.spec-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+}
+
+.spec-box img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+.spec-box span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Text Content Sections (Description & Features) */
+.car-desc, .car-features {
+  margin-top: 32px;
+}
+
+.car-desc h3, .car-features h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 12px 0;
+}
+
+.car-desc p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Grid Framework for Custom Features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.feature-item img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* =========================================
+   RIGHT SIDE ACTION STACK CARD (BOOKING)
+   ========================================= */
+.car-booking {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 110px; /* Locks comfortably inline when scrolling long description layouts */
+}
+
+/* Price presentation container */
+.car-booking .price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.car-booking .price h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.car-booking .price span {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Date Pickers Form UI layout */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.booking-form label:not(:first-of-type) {
+  margin-top: 18px;
+}
+
+.booking-form input[type="date"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--text-main);
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.booking-form input[type="date"]:focus {
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 4px rgba(224, 61, 30, 0.12);
+}
+
+/* Form Submit Call-To-Action */
+.booking-form button[type="submit"] {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: var(--brand-color);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 24px;
+  box-shadow: 0 4px 12px rgba(224, 61, 30, 0.15);
+  transition: all 0.2s ease;
+}
+
+.booking-form button[type="submit"]:hover {
+  background-color: var(--brand-hover);
+  box-shadow: 0 6px 20px rgba(224, 61, 30, 0.25);
+  transform: translateY(-1px);
+}
+
+.booking-form button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Secondary disclaimer footer string */
+.booking-form .note {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 14px 0 0 0;
+  font-weight: 400;
+}
+
+/* =========================================
+   RESPONSIVE VIEWPORT BREAKPOINTS
+   ========================================= */
+@media (max-width: 960px) {
+  .car-layout {
+    grid-template-columns: 1fr; /* Drop secondary column behind primary image on medium grids */
+    gap: 32px;
+  }
+
+  .car-booking {
+    position: static; /* Removes frozen layout anchors on smaller tablets and mobile windows */
+  }
+}
+
+@media (max-width: 480px) {
+  .car-details-page {
+    padding: 24px 16px;
+  }
+
+  .car-title1 h1 {
+    font-size: 26px;
+  }
+
+  .car-booking {
+    padding: 24px 20px;
+  }
+
+  .car-specs {
+    grid-template-columns: repeat(2, 1fr); /* Forms even 2x2 blocks on structural small mobile screens */
   }
 }

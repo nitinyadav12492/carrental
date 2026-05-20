@@ -127,6 +127,60 @@
   }
 }
 
+@media (max-width: 600px) {
+  .car-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .car-image-container {
+    height: 170px;
+  }
+
+  .status-badge {
+    padding: 5px 11px;
+    font-size: 0.75rem;
+    top: 11px;
+    left: 11px;
+  }
+
+  .car-details {
+    padding: 12px;
+  }
+
+  .car-title h3 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .car-title p {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  .car-infomation {
+    gap: 10px;
+  }
+
+  .info-item {
+    font-size: 0.8rem;
+  }
+
+  .price-overlay {
+    padding: 6px 12px;
+    bottom: 11px;
+    right: 11px;
+  }
+
+  .price-val {
+    font-size: 1.05rem;
+  }
+
+  .price-unit {
+    font-size: 0.75rem;
+  }
+}
+
 @media (max-width: 480px) {
   .car-card {
     margin: 0;
