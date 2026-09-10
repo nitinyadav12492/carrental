@@ -501,7 +501,12 @@ const ManageBookings = () => {
                 <tr key={booking._id}>
 
                   <td className="car-info">
-                    <img src={booking.car?.image} alt="" />
+                    <img
+                      src={booking.car?.image}
+                      alt={`${booking.car?.brand} ${booking.car?.model}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
 
                     <span>
                       {booking.car?.brand} {booking.car?.model}

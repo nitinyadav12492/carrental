@@ -91,7 +91,12 @@ View all listed cars, update their details, or remove them from the booking plat
   {cars.map((car) => (
     <tr key={car._id}>
       <td className="car-infoo">
-        <img src={car?.image} alt="" />
+        <img
+          src={car?.image}
+          alt={`${car?.brand} ${car?.model}`}
+          loading="lazy"
+          decoding="async"
+        />
         <div>
           <h4>{car.brand} {car.model}</h4>
           <p>{car.seating_capacity} • {car.transmission}</p>

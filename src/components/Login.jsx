@@ -27,8 +27,6 @@ const Login = () => {
       password
     });
 
-    console.log("API Response:", data); // ✅ debug
-
     if (data.success) {
       localStorage.setItem("token", data.token);
       setToken(data.token);
@@ -40,15 +38,12 @@ const Login = () => {
       // navigate("/"); // ✅ redirect
       navigate(data.user.role === "owner" ? "/owner" : "/");
 
-      toast.success("Login Success");
-      
     } else {
-      toast.error(data.message);
+      toast.error(data.message || "Unable to sign in. Please try again.");
     }
 
   } catch (error) {
-    console.log(error);
-    toast.error("Something went wrong");
+    toast.error(error?.response?.data?.message || "Unable to sign in. Please try again.");
   }
 };
 

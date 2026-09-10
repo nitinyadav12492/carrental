@@ -58,7 +58,13 @@ const handleBooking = async (e) => {
       <div className="car-layout">
         {/* LEFT SIDE */}
         <div className="car-left">
-          <img src={car.image} alt="" className="car-main-img" />
+          <img
+            src={car.image}
+            alt={`${car.brand} ${car.model}`}
+            className="car-main-img"
+            fetchPriority="high"
+            decoding="async"
+          />
 
           <div className="car-title1">
             <h1>{car.brand} {car.model}</h1>

@@ -68,7 +68,13 @@ const{axios,user} =useAppContext()
             
             {/* Left: Image & Car Name */}
             <div className="section-left">
-              <img src={booking.car.image} alt="car" className="car-thumbnail" />
+              <img
+                src={booking.car.image}
+                alt={`${booking.car.brand} ${booking.car.model}`}
+                className="car-thumbnail"
+                loading="lazy"
+                decoding="async"
+              />
               <div className="car-title-info">
                 <h3 className="car-display-name">{booking.car.brand} {booking.car.model}</h3>
                 <p className="car-specs-meta">

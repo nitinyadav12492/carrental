@@ -154,6 +154,8 @@ const Sidebar = ({ isOpen, onClose }) => {
                   className="profile-img"
                   src={image ? URL.createObjectURL(image) : user?.image}
                   alt="profile"
+                  loading="lazy"
+                  decoding="async"
                 />
               ) : (
                 <div className="profile-fallback">{initials}</div>

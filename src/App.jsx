@@ -16,6 +16,7 @@ import AddCar from "./pages/owner/AddCar";
 import ManageCar from "./pages/owner/ManageCar";
 import ManageBookings from "./pages/owner/ManageBookings";
 import { ToastContainer } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css";
 import { useAppContext } from "./context/AppContext";
 const App = () => {
 
@@ -27,7 +28,20 @@ const App = () => {
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer
+        position="top-right"
+        autoClose={3500}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="light"
+        limit={3}
+        toastClassName="app-toast"
+        bodyClassName="app-toast-body"
+        progressClassName="app-toast-progress"
+      />
       {/* Login Modal */}
       {showLogin && <Login />}
 

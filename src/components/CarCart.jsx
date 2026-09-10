@@ -10,6 +10,8 @@ const CarCart = () => {
           src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=2070&auto=format&fit=crop" 
           alt="BMW M4" 
           className="main-car-img"
+          loading="lazy"
+          decoding="async"
         />
         <div className="status-badge">Available Now</div>
         <div className="price-overlay">

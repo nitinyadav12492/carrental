@@ -138,7 +138,7 @@ const Navbar = () => {
       {/* Menu Links */}
       <div className={`mid ${menuOpen ? "active" : ""}`}>
         {menuLinks.map((links, index) => (
-          <Link key={index} to={links.path}>
+          <Link key={index} to={links.path} onClick={() => setMenuOpen(false)}>
             {links.name}
           </Link>
         ))}
@@ -163,8 +163,11 @@ const Navbar = () => {
               if (isOwner) {
                 navigate("/owner"); // Owner dashboard
               } else {
-                navigate("/request-owner"); // Normal user → request page
-                toast.info("You need to become an owner to list cars");
+                navigate("/");
+                toast.info("Become an owner to start listing cars", {
+                  toastId: "owner-access",
+                  autoClose: 4500,
+                });
               }
             }}
           >
@@ -182,15 +185,19 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Button */}
-      <div
+      <button
+        type="button"
+        aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-expanded={menuOpen}
         className="menu-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        ☰
-      </div>
+        <span aria-hidden="true">{menuOpen ? "×" : "☰"}</span>
+      </button>
 
     </div>
   );
 };
 
 export default Navbar;
+

@@ -11,7 +11,13 @@ const CarCard = ({ car }) => {
   return (
     <div onClick={()=>{navigate(`/car-details/${car._id}`);scrollTo(0,0)}}className="car-card">
       <div className="car-image-container">
-        <img className="main-car-img" src={car.image} alt="car" />
+        <img
+          className="main-car-img"
+          src={car.image}
+          alt={`${car.brand} ${car.model}`}
+          loading="lazy"
+          decoding="async"
+        />
            <div className="status-badge">
  {car.isAvailable && <p className="car-available">Available Now</p>}
            </div>

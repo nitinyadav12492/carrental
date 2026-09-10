@@ -31,7 +31,7 @@ export const AppProvider = ({ children }) => {
         navigate("/");
       }
     } catch (error) {
-      toast.error(error.message);
+      console.error("Unable to load user profile:", error);
     }
   };
 
@@ -53,7 +53,6 @@ export const AppProvider = ({ children }) => {
     setUser(null);
     setIsOwner(false);
     axios.defaults.headers.common["Authorization"] = "";
-    toast.success("You have been logged out");
   };
 
   // Get token from localStorage
